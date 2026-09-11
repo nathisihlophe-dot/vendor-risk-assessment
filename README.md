@@ -14,6 +14,5 @@ Security	Art. 32
 Data subject request support	Art. 28(3)(e)
 Recommendation and residual risk	Art. 5(2)
 
-Full writeup: the full assessment
 
 Based on Slack's own public documentation. No personal data involved.
