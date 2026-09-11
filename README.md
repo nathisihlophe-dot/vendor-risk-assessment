@@ -1,46 +1,19 @@
-# Vendor Risk Assessment (Article 28), Worked Example
+Vendor Risk Assessment (Article 28): Slack Worked Example
 
-**A privacy-operations portfolio project.** It assesses a real, widely-used SaaS product, **Slack**, as a processor of personal data: reviewing its published Data Processing Addendum (DPA), sub-processor arrangements, international-transfer mechanisms, and security posture against GDPR Article 28, and ending in a practical recommendation.
+An assessment of Slack as a data processor, based on their published Data Processing Addendum, sub-processor list, transfer mechanisms, and security documentation, checked against GDPR Article 28 requirements.
 
-> **Note on data.** Unlike the other projects in this portfolio, this one uses **real, public, non-personal information**, Slack's own published legal and trust documentation. No personal data is involved. This is exactly the kind of source a privacy team reviews when onboarding a vendor.
+The scenario: a Finnish company adopting Slack for internal communication. Slack processes staff personal data, so before adoption, the DPA terms, sub-processor governance, international transfer handling, and residual risk need review.
 
-> **Jurisdiction.** EU GDPR, from the perspective of an EEA-based (Finnish) customer acting as controller. This is an educational assessment of published terms, not legal advice.
+The output is a written assessment covering processor obligations, sub-processor governance, transfer mechanisms, security, and data subject request support, ending in a risk rating and recommendation.
 
----
+Area	GDPR anchor
+Processor contract (DPA)	Art. 28
+Sub-processor governance	Art. 28(2), 28(4)
+International transfers	Chapter V (Art. 44-49)
+Security	Art. 32
+Data subject request support	Art. 28(3)(e)
+Recommendation and residual risk	Art. 5(2)
 
-## Why this project
+Full writeup: the full assessment
 
-Vendor and processor governance is a core, high-volume privacy-operations task: modern organisations run on third-party SaaS, and each one that touches personal data must be assessed and contractually bound under Article 28. This project shows the assessment done on a genuine product, using the vendor's real documentation.
-
-## The four questions this project answers
-
-**1. What is the problem?**
-An EEA-based organisation (controller) wants to adopt Slack for internal communication. Slack will process the personal data of the organisation's staff, so before adoption the organisation must assess whether Slack meets the GDPR's requirements for a processor (Article 28), how it handles sub-processors and international transfers, and what residual risks remain.
-
-**2. What did I produce?**
-A structured vendor assessment covering the Article 28 processor requirements, sub-processor governance, international-transfer mechanisms, security certifications, and data-subject-request support, with a risk rating and a clear recommendation.
-
-**3. How does it align with GDPR?**
-The assessment is structured around Article 28 (processor obligations and mandatory DPA terms), Chapter V (Articles 44 to 49, international transfers), and the accountability principle (Article 5(2), keeping evidence of vendor due diligence).
-
-**4. What business value does it provide?**
-A consistent vendor-assessment process lets an organisation adopt tools quickly but safely, with a documented basis for the decision, reducing the risk of an unlawful transfer or an uncontracted processor surfacing in an audit.
-
----
-
-## Contents
-
-See [the full assessment](01-slack-assessment.md).
-
-| Area | GDPR anchor |
-|------|-------------|
-| Processor contract (DPA) | Art. 28 |
-| Sub-processor governance | Art. 28(2), 28(4) |
-| International transfers | Chapter V (Art. 44 to 49) |
-| Security | Art. 32 |
-| Data-subject-request support | Art. 28(3)(e) |
-| Recommendation & residual risk | Art. 5(2) |
-
----
-
-*Author: Nathi Sihlophe, data governance & privacy portfolio. Assessment based on Slack's publicly available DPA and trust documentation.*
+Based on Slack's own public documentation. No personal data involved.
