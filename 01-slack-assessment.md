@@ -1,95 +1,41 @@
-# Vendor Assessment, Slack (as a processor)
+Vendor Assessment: Slack (as a processor)
 
-**Vendor:** Slack Technologies (part of Salesforce).
-**Service:** team communication / messaging (SaaS).
-**Role:** processor (Slack processes personal data on the customer's behalf).
-**Controller:** the adopting organisation (EEA / Finland).
-**Basis of assessment:** Slack's publicly available Data Processing Addendum, GDPR/trust pages, and sub-processor documentation.
+Vendor: Slack Technologies (part of Salesforce). Service: team communication and messaging (SaaS). Role: processor, Slack processes personal data on the customer's behalf. Controller: the adopting organisation (EEA, Finland). Basis of assessment: Slack's publicly available Data Processing Addendum, GDPR and trust pages, and sub-processor documentation.
 
----
+Processor contract (Article 28)
 
-## 1. Processor contract (Article 28)
+Article 28 requires a binding contract with specific mandatory terms before a processor can handle personal data on a controller's behalf. Slack publishes a standard Data Processing Addendum built to meet GDPR requirements, and it incorporates the EU and UK Standard Contractual Clauses for international transfers. That satisfies the core requirement for a written processor contract.
 
-Article 28 requires a binding contract (a DPA) with specific mandatory terms before a processor handles personal data on a controller's behalf.
+The gap tends to sit elsewhere: a DPA being published isn't the same as it being executed. Controllers need to actually put it in place, referenced or signed as part of the contract, not just left available on a legal page nobody visits.
 
-**Findings:**
-- Slack publishes a **standard Data Processing Addendum** that customers can incorporate, and it is designed to meet GDPR requirements.
-- The DPA **incorporates the EU (and UK) Standard Contractual Clauses** for international transfers.
+Sub-processor governance (Article 28(2), 28(4))
 
-**Assessment:** A published, GDPR-oriented DPA that incorporates SCCs satisfies the core Article 28 requirement for a written processor contract. **Action for the controller:** ensure the DPA is actually put in place (referenced or signed) as part of the contract, not merely available, this is a common gap where a DPA exists but is never executed.
+A processor can only engage sub-processors under specific conditions, prior authorisation, a current list, notice of changes, and a right to object. Slack's DPA uses a general authorisation model: the customer authorises Slack to engage the sub-processors listed and updated under the DPA, with a subscription mechanism for notifications before a new one starts processing, and a defined objection window (historically ten business days).
 
----
+That structure satisfies Article 28's conditions. What it doesn't do on its own is guarantee anyone's watching, the right to object only has value if the controller actually subscribes to the notification list and assigns someone to review it. Otherwise it's a right that exists on paper and nowhere else.
 
-## 2. Sub-processor governance (Article 28(2), 28(4))
+International data transfers (Chapter V)
 
-A processor may only engage sub-processors under conditions: prior authorisation, a current list, notice of changes, and a right to object.
+Slack is US-headquartered through Salesforce, so EEA personal data is likely transferred outside the EEA, which engages Chapter V. Slack's DPA incorporates SCCs, and through Salesforce, Slack also participates in the EU-US Data Privacy Framework (plus the UK extension and Swiss-US DPF), with Binding Corporate Rules referenced for certain services.
 
-**Findings (from the DPA):**
-- Slack operates a **general authorisation** model for sub-processors: the customer authorises Slack to engage sub-processors listed and updated per the DPA.
-- Slack **maintains a current list of sub-processors** and provides a **subscription mechanism** so customers can be **notified of new sub-processors** before they start processing.
-- Customers have a defined **right to object** to a new sub-processor (the DPA sets a window, historically ten business days, to raise a reasonable objection).
+Two valid mechanisms stacked together is a reasonably strong position. Since Schrems II, though, SCCs alone don't automatically clear the bar, controllers should keep a short written transfer risk assessment on file noting that both DPF participation and SCCs apply, and check whether Slack's Enterprise-tier data residency options matter for their own risk appetite.
 
-**Assessment:** This meets the Article 28 sub-processor conditions, general authorisation is permitted provided notice and an objection right exist, which they do. **Action for the controller:** actually **subscribe to the sub-processor notification list** and assign someone to review changes, the objection right is worthless if no one is watching for new sub-processors.
+Security (Article 32)
 
----
+Slack holds ISO 27001, ISO 27017 (cloud security), and ISO 27018 (cloud personal data protection), with encryption, access controls, and audited practices documented in its trust materials. Independently audited certifications at this level are solid evidence of appropriate technical and organisational measures. The only real action item here is administrative: keep copies of the current certificates and track renewal dates, since certifications lapse.
 
-## 3. International data transfers (Chapter V)
+Data subject request support (Article 28(3)(e))
 
-Slack is US-headquartered (Salesforce), so EEA personal data is likely transferred outside the EEA, engaging Chapter V.
+Slack provides tooling to locate, export, and delete user data, which supports a controller's own access and erasure obligations. This is adequate, and it connects directly to a controller's DSAR process. The practical step worth taking early: know which admin tool produces the export before a request lands, not during the one-month response clock.
 
-**Findings:**
-- Slack's DPA **incorporates EU/UK Standard Contractual Clauses** as a transfer mechanism.
-- Through Salesforce, Slack participates in the **EU-US Data Privacy Framework** (and the UK extension and Swiss-US DPF).
-- Salesforce also references **Binding Corporate Rules** for certain services.
+Recommendation
+Area	Rating
+Processor contract (DPA)	Strong
+Sub-processor governance	Strong, if notifications are monitored
+International transfers	Adequate, record a transfer risk assessment
+Security	Strong
+Data subject request support	Adequate
 
-**Assessment:** Multiple valid transfer mechanisms are in place (SCCs plus DPF participation). This is a reasonably strong transfer posture. **Action for the controller:** post-*Schrems II*, SCCs alone are not automatically sufficient, the controller should record a brief **transfer risk assessment** noting that DPF participation and SCCs both apply, and confirm whether any data-residency options (Slack offers some at the Enterprise tier) are relevant to its risk appetite.
+Slack can be adopted as a processor. The DPA, SCCs, DPF participation, security certifications, and sub-processor transparency together satisfy Article 28 and Chapter V. Adoption should carry four conditions: execute the DPA rather than relying on it being published, subscribe to and actively monitor the sub-processor notification list with a named owner, record a short transfer risk assessment covering the SCC and DPF position, and retain security certificates while identifying DSR export tooling in advance.
 
----
-
-## 4. Security (Article 32)
-
-**Findings:**
-- Slack holds **ISO 27001** and the related **ISO 27017** (cloud security) and **ISO 27018** (cloud personal-data protection) certifications.
-- Encryption, access controls, and audited security practices are described in its trust documentation.
-
-**Assessment:** Recognised, independently audited certifications indicate appropriate technical and organisational measures under Article 32. **Action for the controller:** retain copies of the current certificates as evidence, and note the renewal dates.
-
----
-
-## 5. Data-subject-request support (Article 28(3)(e))
-
-A processor must help the controller respond to data-subject requests.
-
-**Findings:**
-- Slack provides **tooling and documented processes** to help customers locate, export, and delete user data, supporting the controller's obligations for access and erasure requests.
-
-**Assessment:** Adequate. This directly supports the controller's own DSAR handling (see the DSAR project). **Action for the controller:** understand *which* admin tools produce the export, before a request arrives, not during the one-month clock.
-
----
-
-## 6. Recommendation and residual risk
-
-| Area | Rating |
-|------|--------|
-| Processor contract (DPA) | Strong |
-| Sub-processor governance | Strong (if notifications are monitored) |
-| International transfers | Adequate (record a transfer risk assessment) |
-| Security | Strong |
-| DSR support | Adequate |
-
-**Overall: acceptable to adopt, with conditions.**
-
-**Recommendation:** Slack can be adopted as a processor. It offers a GDPR-oriented DPA with SCCs, DPF participation, strong security certifications, and sub-processor transparency, which collectively satisfy the Article 28 and Chapter V requirements. Adoption should be conditional on the controller completing four practical steps:
-
-1. **Execute** the DPA (do not just rely on it being published).
-2. **Subscribe to and monitor** the sub-processor notification list, and assign an owner.
-3. **Record a short transfer risk assessment** covering the SCCs / DPF position.
-4. **Retain** the security certificates and identify the DSR export tooling in advance.
-
-**Residual risk:** low to moderate, driven mainly by the international-transfer position (inherent to any US-based SaaS) and by the *operational* risk that the controller fails to monitor sub-processor changes. Both are manageable with the steps above.
-
----
-
-## Reflection
-
-The pattern this illustrates: for a mature vendor like Slack, the **documentation is usually strong**, the real risk sits with the **controller's own follow-through**, executing the DPA, watching for sub-processor changes, and recording the transfer assessment. Vendor assessment is not only reading the vendor's paperwork; it is identifying the **actions the controller must take** to make the relationship compliant and keep it that way.
+Residual risk sits at low to moderate, mostly from the international transfer position, which is inherent to any US-based SaaS, and from the operational risk of a controller not tracking sub-processor changes. For a vendor at Slack's scale, the documentation itself is rarely the weak point. It's the controller's own follow-through, executing the DPA, watching for changes, keeping the transfer assessment current, that determines whether the relationship stays compliant over time.
