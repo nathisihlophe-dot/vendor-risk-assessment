@@ -1,4 +1,4 @@
-Vendor Risk Assessment (Article 28): Slack Worked Example
+Vendor Risk Assessment (Article 28)
 
 An assessment of Slack as a data processor, based on their published Data Processing Addendum, sub-processor list, transfer mechanisms, and security documentation, checked against GDPR Article 28 requirements.
 
